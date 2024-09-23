@@ -1,0 +1,20 @@
+<form [formGroup]="exerciseForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="name">Exercise Name: </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+        <label for="sets">Sets Number: </label>
+        <input id="sets" type="number" formControlName="sets">
+    </div>
+
+    <div>
+        <label for="reps">Reps Number: </label>
+        <input id="reps" type="number" formControlName="reps">
+    </div>
+
+    <button type="submit" [disabled]="!exerciseForm.valid">Submit</button>
+
+</form>
